@@ -1,0 +1,51 @@
+.rules {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+	 }
+	 
+	 
+	 &__item {
+		 width: 270px;
+		 text-align: left;
+	  }
+	 
+	  
+	 &__item-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 270px;
+		height: 120px;
+		background-color: var(--team-bkg);
+		border-radius: 4px;
+		margin-bottom: 30px;
+	 }
+	 
+	 
+	 &__item-box-title {
+		 display: inline-block;
+		 font-weight: 700;
+		 font-size: 14px;
+		 margin-bottom: 10px;
+		 line-height: 1.14;
+		 letter-spacing: 0.03em;
+		 text-transform: uppercase;
+		 color: var(--h3-text-color);
+	  }
+	 
+	 
+	 &__item-box-text {
+		margin-top: 0;
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.03em;
+		color: var(--basic-text-color);
+	 }
+
+ }
+

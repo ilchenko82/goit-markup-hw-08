@@ -1,0 +1,29 @@
+
+.button-blue {
+	padding: 10px 32px 10px 32px;
+ 
+	background-color: var(--logo-text-color);
+	cursor: pointer;
+	color: var(--filter-link-color);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	border-style: hidden;
+	border-radius: 4px;
+ 
+	box-shadow: 0px 4px 4px var(--button-transparent);
+ 
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .button-blue:hover,
+ .button-blue:focus {
+	background-color: var(--buttonactive);
+	cursor: pointer;
+ }
+
+ .button-margin{
+	margin-top: 30px;
+
+ }
