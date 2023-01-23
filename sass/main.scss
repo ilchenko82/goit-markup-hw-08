@@ -1,4 +1,7 @@
+
 @import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
 @import "./utils/normalize";
 @import "./utils/hidden";
 @import "./components/basic-style";
@@ -12,6 +15,7 @@
 @import "./components/our-team";
 @import "./components/our-clients";
 @import "./components/we-do";
+@import "./components/toggle-menu";
 
 @import "./components/portfolio-menu";
 @import "./components/portfolio";

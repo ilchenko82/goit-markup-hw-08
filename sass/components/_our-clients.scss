@@ -1,7 +1,27 @@
 .clients {
 	background-color: var(--filter-link-color);
- 
-	&__item {
+ 		 
+	 &__list {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+		margin-top: 50px;
+		
+		@include to-mobile {
+			flex-wrap: wrap;
+		}
+		@include mobile {
+			flex-wrap: wrap;
+		 }
+		 @include tablet {
+			flex-wrap: wrap;
+		 }
+		 @include pc {
+			display: flex;
+			justify-content: center;
+		 }
+	 }
+	 &__item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -15,19 +35,23 @@
 		transition-property: background-color, border, fill;
 		transition-duration: 250ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	 }
+
+		@include mobile{
+			width: 170px;
+		  }
+		 @include tablet{
+			width: 226px;
+		  }
+		 @include pc{
+			width: 170px;
+		  }
+		 }
+	 
 	 
 	 &__item:hover,
 	 &__item:focus {
 		fill: var(--logo-text-color);
 		border: 1px solid var(--logo-text-color);
-	 }
-	 
-	 &__list {
-		display: flex;
-		justify-content: center;
-		gap: 30px;
-		margin-top: 50px;
 	 }
 	 
 	 &__title {
@@ -39,4 +63,3 @@
 		 padding: 0;
 	  }
 }
- 

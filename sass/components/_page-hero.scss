@@ -1,11 +1,13 @@
 .hero {
 /* 	width: 1600px; */
+
 	background-color: var(--footer-bkg-color);
 	text-align: center;
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 118px;
+	padding-bottom: 118px;
 	margin-left: auto;
 	margin-right: auto;
+	height: 400px;
  
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 	  url(../images/hero.jpg);
@@ -13,31 +15,50 @@
 	background-position: center;
 	background-size: cover;
 
+/* 	@include mobile {
+		padding: 118px 0;
+		height: 400px;
+	} */
+	@include tablet {
+		padding: 118px 0;
+		height: 400px;
+	 }
+	@include pc {
+		height: 600px;
+		padding: 200px 0;
+	 }
+
 	&__text-title {
-		font-weight: 900;
-		font-size: 44px;
-		line-height: 1.65;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: var(--filter-link-color);
-		/* 	text-align: center; */
+		font-size: 26px;
+			line-height: 1.65;
+			max-height: 400px;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			color: var(--filter-link-color);
 
-		@media screen and (max-width: 480px){
+		@include mobile {
 			font-size: 26px;
-		line-height: 1.65;
-		padding-top: 118px;
-		padding-bottom: 30px;
-		padding-left: 40px;
-		padding-right: 40px;
-		// border: solid 1px tomato;
-
+			
 		}
+		@include tablet {
+			font-size: 26px;
+			padding-bottom: 0;
+			padding-top: 0;
+		 }
+		@include pc {
+			padding-bottom: 0;
+			padding-top: 0;
+			font-weight: 900;
+			font-size: 44px;
+			line-height: 1.65;
+			
+			margin-top: 0px;
+			margin-left: 10px;
+			font-size: 44px;
+		 }
+
 
  }
 
-		@media screen and (max-width: 480px){
-			width: 480px;
-			padding: 0;
-		}
 
 }

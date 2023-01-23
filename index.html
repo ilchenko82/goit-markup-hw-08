@@ -11,29 +11,20 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link	href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
 		rel="stylesheet">
-		<script src="./js/menu.js"></script>
 	<title>Document</title>
 </head>
 <body>
 	<header class="header">
 		<div class="header__container">
 			<a class="logo" href="./index.html">Web<span class="logo-black">Studio</span></a>
-			<button type="button" class="nav__button is-open" data-menu-button>
-				<svg width="40px" height="40px">
-					<use class="nav__button-menu" href="./images/sprite.svg#menu"></use>
-					<use class="nav__button-cross" href="./images/sprite.svg#close"></use>
-				</svg>
-			</button>
-			<div class="header__menu">
-				<nav class="nav">
-					<ul class="nav__menu ul-nolist">
-						<li class="nav__item"><a class="nav__link nav__link_current" href="./index.html">Студія</a></li>
-						<li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфоліо</a></li>
-						<li class="nav__item"><a class="nav__link" href="./contacts.html">Контакти</a></li>
-					</ul>
-					
-				</nav>
-				<ul class="contacts">
+			<nav class="nav">
+				<ul class="nav__menu">
+					<li class="nav__item"><a class="nav__link nav__link_current" href="./index.html">Студія</a></li>
+					<li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфоліо</a></li>
+					<li class="nav__item"><a class="nav__link" href="./contacts.html">Контакти</a></li>
+				</ul>
+			</nav>
+			<ul class="contacts">
 					<li class="contacts__item"><a class="contacts__link" href="mailto:info@devstudio.com">
 						<svg class="contacts__icon" width="16px" height="12px">
 						<use href="./images/sprite.svg#icon-letter"></use>
@@ -44,28 +35,77 @@
 						<use href="./images/sprite.svg#icon-phone"></use>
 						</svg>+38 096 111 11 11</a>
 					</li>
-				</ul>
-				<ul class="contacts-480 ul-nolist">
-					<li class="contacts-480__item"><a class="contacts-480__link" href="tel:+380961111111">
-						+38 096 111 11 11</a>
-					</li>
-					<li class="contacts-480__item"><a class="contacts-480__link-mail" href="mailto:info@devstudio.com">
-						info@devstudio.com</a>
-					</li>
-				</ul>
-			</div>
-
+			</ul>
+			<button type="button" class="js-open-menu menu-toggle" data-menu-button="" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use
+              class="icon-menu__open"
+              href="./images/sprite.svg#menu"
+            ></use>
+          </svg>
 		</div>
+		<div class="js-menu-container menu-container" id="mobile-menu">
+			<button class="js-close-menu menu-toggle">
+			  <svg
+				 class="menu-toggle__icon"
+				 width="40"
+				 height="40"
+				 aria-label="Перемикач мобільного меню"
+			  >
+				 <use
+					class="icon-menu__close"
+					href="./images/sprite.svg#close"
+				 ></use>
+			  </svg>
+			</button>
+			<ul class="mobile-menu">
+			  <li class="mobile-menu__item">
+				 <a
+					href="./index.html"
+					class="link mobile-menu__link mobile-menu__link--current"
+					>Студія</a
+				 >
+			  </li>
+			  <li class="mobile-menu__item">
+				 <a href="./portfolio.html" class="link mobile-menu__link">Портфоліо</a>
+			  </li>
+			  <li class="mobile-menu__item"><a href="#" class="link mobile-menu__link">Контакти</a></li>
+			</ul>
+			<ul class="contacts-menu">
+			  <li class="contacts-menu__item">
+				 <a href="tel:+380961111111" class="contacts-menu__link contacts-menu__tel">
+					<svg class="contacts-menu__icon" width="10px" height="16px">
+					  <use href="./images/sprite.svg#icon-phone"></use>
+					</svg>
+					+38 096 111 11 11</a
+				 >
+			  </li>
+			  <li class="contacts-menu__item">
+				 <a class="contacts-menu__link contacts-menu__mail" href="mailto:info@devstudio.com">
+					<svg class="contacts-menu__icon" width="16px" height="12px">
+					  <use href="./images/sprite.svg#icon-letter"></use>
+					</svg>
+					info@devstudio.com</a
+				 >
+			  </li>
+			</ul>
+			<ul class="networks-menu">
+			  <li class="networks-menu__item"><a class="networks-menu__link" href="#">Instagram</a></li>
+			  <li class="networks-menu__item"><a class="networks-menu__link" href="#">Twitter</a></li>
+			  <li class="networks-menu__item"><a class="networks-menu__link" href="#">Facebook</a></li>
+			  <li class="networks-menu__item"><a class="networks-menu__link" href="#">LinkedIn</a></li>
+			</ul>
+		 </div>
 	</header>
-<!-- <main>
-	<section class="hero">
+<main>
+<section class="hero">
 		<div class="container">
 			<h1 class="hero__text-title">Ефективні рішення для</br>вашого бізнесу</h1>
 			<button type="button" class="button-blue button-margin" data-modal-open>Замовити послугу</button>
 			<div class="backdrop is-hidden" data-modal>
 				<div class="modal">
 					<p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
-					<form class="modal__form">
+						<form class="modal__form">
 							<div class="modal__form-field">
 								<label class="modal__form-label" for="name">Ім'я</label>
 								<input class="modal__form-input" type="text" id="name" placeholder="Василий Пупкин">
@@ -99,7 +139,7 @@
 									</label>
 							</div>
 						<button type="submit" class="button-blue button-send">Відправити</button>
-					</form>
+						</form>
 						<button class="button-closed" data-modal-close>
 							<svg width="11px" height="11px">
 								<use href="./images/sprite.svg#icon-close"></use>
@@ -108,11 +148,11 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
-	<!-- <section class="section rules">
-		<div class="container">
+	</section>
+<section class="section rules">
+		<div class="container"> 
 		<h2 class="hidden">Наші правила</h2>
-		<ul class="ul-nolist rules__list">
+		<ul class="ul-nolist rules__list"> 
 			<li class="rules__item">
 				<div class="rules__item-box">
 					<svg width="65px" height="70px">
@@ -152,7 +192,7 @@
 		</ul>
 	</div>
 	</section>
-	   <section class="section we-do">
+<section class="section we-do">
 		<div class="container"><h2 class="we-do__title">Чим ми займаємось</h2>
 			<ul class="ul-nolist we-do__list">
 				<li class="we-do__item">
@@ -168,7 +208,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="section team">
+<section class="section team">
 			<div class="container">
 				<h2 class="team__title">Наша команда</h2>
 			<ul class="ul-nolist team__list">
@@ -324,7 +364,7 @@
 			</ul>
 			</div>
 		</section>
-	<section class="section clients">
+ <section class="section clients">
 		<div class="container">
 		<h2 class="clients__title">Постійні клієнти</h2>
 			<ul class="ul-nolist clients__list">
@@ -420,8 +460,8 @@
 	</div>
 	<div class="footer__form">
 		<p class="footer__form-title">Підпишіться на розсилку</p>
-			<div class="footer__email">
-				<form name="footer-email">
+			<div>
+				<form name="footer__email">
 					<label for="footer-email">
 						<input class="footer__form-input" type="footer-email" placeholder="E-mail">
 					</label>
@@ -436,8 +476,8 @@
 			</div>
 	</div>
 </div>
-</footer> -->
+</footer>
 <script src="./js/modal.js"></script>
-
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>

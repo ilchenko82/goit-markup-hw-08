@@ -111,6 +111,15 @@ ul {
  .nav__item: {
 	margin-left: 50px;
 	margin-bottom: 0;
+
+	@include tablet {
+		display: flex;
+		margin-top: 0px;
+		position: relative;
+	 }
+  
+	 @include pc {
+	 }
  }
  
 

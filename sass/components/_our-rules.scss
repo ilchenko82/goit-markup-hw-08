@@ -2,16 +2,60 @@
 	padding-top: 94px;
 	padding-bottom: 94px;
 
+
+	@include mobile {
+		&__list {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 30px;
+		 }
+	}
+
+	@include tablet {
 	&__list {
 		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
+		// flex-basis: 50%;
 		gap: 30px;
+		 };
 	 }
-	 
+	
+
+	@include pc {
+		&__list {
+			
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			gap: 30px;
+		 }
+		}
 	 
 	 &__item {
-		 width: 270px;
-		 text-align: left;
+		width: 100%;
+		max-width: 768px;
+		margin-bottom: 30px;
+		text-align: left;
+		 
+		 &:last-child {
+			margin-bottom: 0;}
+		 &:last-child {
+		 	margin-right: 0;}
+
+		 @include tablet {
+		 	width: 354px;
+		 	margin-bottom: 0px;
+			// border: solid 1px;
+		 }
+
+		 @include pc {
+			&__list {
+			width: 270px
+				 };
+			 }
 	  }
 	 
 	  
@@ -19,7 +63,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 270px;
+		width: 100%;
 		height: 120px;
 		background-color: var(--team-bkg);
 		border-radius: 4px;

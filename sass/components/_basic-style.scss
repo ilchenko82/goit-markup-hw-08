@@ -37,13 +37,32 @@ body {
   margin-right: auto;
   text-align: center;
   padding: 0 15px;
+  
 
-  @media screen and (max-width: 480px){
-	width: 480px;
-  }
+  @include mobile{
+	 min-width: 480px;
+	 padding: 0 15px;
+   }
+
+	@include tablet{
+		min-width: 768px;
+	}
+
+	  @include pc{
+		min-width: 1200px;
+	  }
+
+
+
 } 
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @include mobile{
+	padding-top: 60px;
+	padding-bottom: 60px;
+  }
+
 }

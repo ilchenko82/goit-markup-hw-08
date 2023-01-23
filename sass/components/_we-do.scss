@@ -1,6 +1,13 @@
 .we-do {
 	padding-top: 0;
-
+	display: none;
+	
+	@include tablet {
+		display: none;
+	}
+	@include pc {
+		display: block;
+	}
 
 	&__list {
 		display: flex;

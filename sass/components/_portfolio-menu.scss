@@ -1,8 +1,34 @@
 .portfolio {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	gap: 8px; /* 
 	padding-top: 94px; */
+
+	@include to-mobile {
+		width: 100%;
+		max-width: 480px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+
+	}
+	@include mobile {
+		width: 100%;
+		max-width: 480px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+
+	}
+	@include tablet {
+		display: flex;
+		justify-content: center;
+	}
+
+	@include pc {
+		display: flex;
+		justify-content: center;
+		}
+ 
 
 	&__button {
 		font-family: inherit;
