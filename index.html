@@ -196,14 +196,29 @@
 		<div class="container"><h2 class="we-do__title">Чим ми займаємось</h2>
 			<ul class="ul-nolist we-do__list">
 				<li class="we-do__item">
-					<img src="./images/img1.jpg" alt="десктопні додатки" width="370">
+					<img
+						srcset="./images/img1.jpg 1x,
+						./images/img1@2x.jpg 2x"
+							src="./images/img1.jpg"
+							alt="Десктопні додатки"
+						/>
 					<div class="we-do__products"><p>десктопні додатки</p></div>
 				</li>
 				<li class="we-do__item">
-					<img src="./images/img2.jpg" alt="мобільні дрдатки" width="370">
+					<img
+						srcset="./images/img2.jpg 1x,
+						./images/img2@2x.jpg 2x"
+							src="./images/img2.jpg"
+							alt="Десктопні додатки"
+						/>
 					<div class="we-do__products"><p>мобільні додатки</p></div>
 				</li><li class="we-do__item">
-					<img src="./images/img3.jpg" alt="дизайнерські рішення" width="370">
+					<img
+					srcset="./images/img3.jpg 1x,
+					./images/img3@2x.jpg 2x"
+						src="./images/img3.jpg"
+						alt="Десктопні додатки"
+					/>
 					<div class="we-do__products"><p>дизайнерські рішення</p></div>
 				</li>
 			</ul>
@@ -213,7 +228,21 @@
 				<h2 class="team__title">Наша команда</h2>
 			<ul class="ul-nolist team__list">
 				<li class="team__item">
-					<img src="./images/people_igor.jpg" alt="Ігор" width="270">
+					<picture>
+						<source
+							srcset="./images/igor_pc@1x.jpg 1x,
+							 ./images/igor_pc@2x.jpg 2x"
+							media="(min-width: 1200px)"/>
+						<source
+							srcset="./images/igor_tabl@1x.jpg 1x,
+							./images/igor_tabl@2x.jpg 2x"
+							media="(min-width: 768px)"/>
+						<img srcset="./images/igor_mobile@1x.jpg 1x,
+						./images/igor_mobile@2x.jpg 2x"
+							src="./images/igor_mobile@1x.jpg"
+							alt="Ігор Дем'яненко"
+							class="team-list__img"/>
+						</picture>
 					<div class="team__info">
 					 <h3 class="team__people-name">Ігор Дем'яненко</h3>
 					 <p class="team__employee">Product Designer</p>
@@ -250,7 +279,21 @@
 					</div>
 				</li>
 				<li class="team__item">
-					<img src="./images/people_olga.jpg" alt="Ольга" width="270">
+					<picture>
+						<source
+							srcset="./images/olga_pc@1x.jpg 1x,
+							 ./images/olga_pc@2x.jpg 2x"
+							media="(min-width: 1200px)"/>
+						<source
+							srcset="./images/olga_tabl@1x.jpg 1x,
+							./images/olga_tabl@2x.jpg 2x"
+							media="(min-width: 768px)"/>
+						<img srcset="./images/olga_mobile@1x.jpg 1x,
+						./images/olga_mobile@2x.jpg 2x"
+							src="./images/olga_mobile@1x.jpg"
+							alt="Ольга Рєпіна"
+							class="team-list__img"/>
+						</picture>
 					<div class="team__info">
 					<h3 class="team__people-name">Ольга Рєпіна</h3>
 					<p class="team__employee">Frontend Developer</p>
@@ -288,7 +331,21 @@
 					
 				</li>
 			<li class="team__item">
-				<img src="./images/people_mikola.jpg" alt="Микола" width="270">
+				<picture>
+					<source
+						srcset="./images/mykola_pc@1x.jpg 1x,
+						 ./images/mykola_pc@2x.jpg 2x"
+						media="(min-width: 1200px)"/>
+					<source
+						srcset="./images/mykola_tabl@1x.jpg 1x,
+						./images/mykola_tabl@2x.jpg 2x"
+						media="(min-width: 768px)"/>
+					<img srcset="./images/mykola_mobile@1x.jpg 1x,
+					./images/mykola_mobile@2x.jpg 2x"
+						src="./images/mykola_mobile@1x.jpg"
+						alt="Микола Тарасов"
+						class="team-list__img"/>
+					</picture>
 				<div class="team__info">
 					<h3 class="team__people-name">Микола Тарасов</h3>
 				<p class="team__employee">Marketing</p>
@@ -325,7 +382,21 @@
 			</div>
 				</li>
 			<li class="team__item">
-				<img src="./images/people_michael.jpg" alt="Майкл" width="270">
+				<picture>
+					<source
+						srcset="./images/mykhailo_pc@1x.jpg 1x,
+						 ./images/mykhailo_pc@2x.jpg 2x"
+						media="(min-width: 1200px)"/>
+					<source
+						srcset="./images/mykhailo_tabl@1x.jpg 1x,
+						./images/mykhailo_tabl@2x.jpg 2x"
+						media="(min-width: 768px)"/>
+					<img srcset="./images/mykhailo_mobile@1x.jpg 1x,
+					./images/mykhailo_mobile@2x.jpg 2x"
+						src="./images/mykhailo_mobile@1x.jpg"
+						alt="Михайло Єрмаков"
+						class="team-list__img"/>
+					</picture>
 				<div class="team__info">
 					<h3 class="team__people-name">Михайло Єрмаков</h3>
 				<p class="team__employee">UI Designer</p>
@@ -460,7 +531,7 @@
 	</div>
 	<div class="footer__form">
 		<p class="footer__form-title">Підпишіться на розсилку</p>
-			<div>
+			<div class="footer__email">
 				<form name="footer__email">
 					<label for="footer-email">
 						<input class="footer__form-input" type="footer-email" placeholder="E-mail">

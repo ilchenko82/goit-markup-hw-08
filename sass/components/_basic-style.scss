@@ -40,16 +40,16 @@ body {
   
 
   @include mobile{
-	 min-width: 480px;
+	 width: 480px;
 	 padding: 0 15px;
    }
 
 	@include tablet{
-		min-width: 768px;
+		width: 768px;
 	}
 
 	  @include pc{
-		min-width: 1200px;
+		width: 1200px;
 	  }
 
 

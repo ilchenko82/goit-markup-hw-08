@@ -229,6 +229,8 @@
   }
 
   &__email {
+	display: flex;
+	width: 350px;
 
 
 	 @include mobile {
@@ -236,11 +238,13 @@
       text-align: center;
     }
     @include tablet {
+		width: 450px;
+		flex-direction: column;
+		flex-wrap: wrap;
 		margin-left: 0;
     }
     @include pc {
 		border: solid 1px red;
-		display: flex;
 		align-items: flex-start;
 		flex-wrap: nowrap;
 		gap: 12px;
@@ -268,7 +272,7 @@
     }
     @include tablet {
 		margin-top: 20px;
-		width: 358px;
+		width: 450px;
     }
     @include pc {
 		margin-top: 0px;
